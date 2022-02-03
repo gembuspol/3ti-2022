@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    <script>
+        
+        for(step = 1; step < 10; step++){
+            document.write("<tr><td>")
+            document.write(step)
+            document.write("</td>")
+
+            for(step1 = 1; step1 < 10; step1++){
+                document.write("<td>")
+                document.write(step*step1)
+                document.write("</td>")
+            }
+            document.write("</tr>")
+        }
+        document.write("</table><table>")
+        step=1
+        step1=1
+        while(step<10){
+            document.write("<tr><td>")
+            document.write(step)
+            document.write("</td>")
+            while(step1<10){
+                document.write("<td>")
+                document.write(step*step1)
+                document.write("</td>")
+                step1++
+            }
+            document.write("</tr>")
+            step++
+        }
+        document.write("</table><table>")
+        step=1
+        step1=1
+        do{
+            document.write("<tr><td>")
+            document.write(step)
+            document.write("</td>")
+            do{
+                document.write("<td>")
+                document.write(step*step1)
+                document.write("</td>")
+                step1++
+            }while(step1<10)
+            document.write("</tr>")
+            step++
+        }while(step<10)
+    
+    </script>
+    </table>
+</body>
+</html>
