@@ -4,8 +4,8 @@ def main():
    pygame.init()
    OknoGry=pygame.display.set_mode((400,400),0,32)
    run=True
-   zmienna1=140
-   zmienna2=140
+   zmienna1=120
+   zmienna2=120
    while(run):
        OknoGry.fill((0,0,0))
        pygame.time.delay(200)
@@ -20,13 +20,13 @@ def main():
            #ruch weza
            elif event.type == pygame.KEYDOWN:
                if event.key == pygame.K_UP:
-                   zmienna2=zmienna2-20
+                   zmienna2=zmienna2-40
                elif event.key == pygame.K_DOWN:
-                   zmienna2=zmienna2+20
+                   zmienna2=zmienna2+40
                elif event.key == pygame.K_LEFT:
-                   zmienna1=zmienna1-20
+                   zmienna1=zmienna1-40
                elif event.key == pygame.K_RIGHT:
-                   zmienna1=zmienna1+20
+                   zmienna1=zmienna1+40
        #zmienna1=zmienna1+20
        #zmienna2=zmienna2+20
        #przejście strona prawa
