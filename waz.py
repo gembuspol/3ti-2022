@@ -7,6 +7,9 @@ class Snake():
         self.dlugosc=1
         self.punkty=0
         self.pozycje=[(120,120)]
+        self.kierunek=(0,1)
+    def setDirection(self,kier):
+        self.kierunek=kier
     #pobranie pozycji głowy
     def getHead(self):
         return self.pozycje[-1]
@@ -17,7 +20,12 @@ class Snake():
          for wspolrzendne in self.pozycje[::-1]: 
             wazShape=pygame.Rect((wspolrzendne[0],wspolrzendne[1]),(40,40))
             pygame.draw.rect(OknoGry,(255,192,203),wazShape)
-    def snakeMove(self,x,y):
+    def snakeMove(self):
+        #ostatnia pozycja weza
+        ostatniaPozycja=self.pozycje[-1]
+        #nowe pozycje
+        x=ostatniaPozycja[0]+40*self.kierunek[0]
+        y=ostatniaPozycja[1]+40*self.kierunek[1]
         #sprawdzenie przejścia krawędzi
         noweWspl=self.checkBorder(x,y)
          #sprawdzenie czy wąż sam siebie nie zjadł
