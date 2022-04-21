@@ -2,6 +2,7 @@ import pygame
 import random
 import waz
 
+iloscJablek=9
 def main():
     obiektWaz=waz.Snake()
     
