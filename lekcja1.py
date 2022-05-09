@@ -69,7 +69,9 @@ def main():
             #rysowanie jabłka
             print(positionApple[0])
             nrApple.drawApple(OknoGry)
-            
+        #zjadanie się węży nawzajem
+        obiektWaz1.biteMe(glowa2)
+        obiektWaz2.biteMe(glowa1)     
         
         czcionka=pygame.font.SysFont('comicsans',20)
         tekst1=czcionka.render("Punkty gracz 1: {0}".format(obiektWaz1.punkty),1,(255,255,255))
