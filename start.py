@@ -3,6 +3,8 @@ import pygame_menu
 import lekcja1
 def zmianaRozdzielczosci(nazwaPola,atrybut):
     lekcja1.rozdzielczosc=atrybut
+def zmienKolorWaz1(value):
+    lekcja1.zmienaKolorWaz1(value)
 def main():
     pygame.init()
     OknoMenu=pygame.display.set_mode((400,400))
@@ -10,6 +12,7 @@ def main():
     menu = pygame_menu.Menu('Snake 3TI', 400, 400,theme=pygame_menu.themes.THEME_DARK)
     menu.add.button("Start Gry",lekcja1.main,background_color=(0,0,0))
     menu.add.selector("Rozmiar ekranu",[('400x400',400),('600x600',600),('800x800',800)],onchange=zmianaRozdzielczosci)
+    menu.add.color_input("Kolor wąż 1",'rgb',default=(25,25,100),onreturn=zmienKolorWaz1)
 
     menu.mainloop(OknoMenu)
 

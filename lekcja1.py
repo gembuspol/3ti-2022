@@ -3,7 +3,10 @@ import random
 import waz
 import jablko
 rozdzielczosc=400
-
+obiektWaz1=waz.Snake()
+obiektWaz2=waz.Snake()
+def zmienaKolorWaz1(color):
+    obiektWaz1.setColor(color)
 iloscJablek=9
 def main():
 #tworzenie jabłek
@@ -11,8 +14,7 @@ def main():
     for nrApple in range(0,iloscJablek):
         objectApple.append(jablko.Jablko())
 
-    obiektWaz1=waz.Snake()
-    obiektWaz2=waz.Snake()
+    
     
     
     pygame.init()

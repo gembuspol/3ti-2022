@@ -8,6 +8,11 @@ class Snake():
         self.punkty=0
         self.pozycje=[(120,120)]
         self.kierunek=(0,1)
+        self.kolor=(255,0,0)
+    #ustawienie koloru węża
+    def setColor(self,color):
+        self.kolor=color
+    #ustawienie kierunku weża
     def setDirection(self,kier):
         self.kierunek=kier
     #pobranie pozycji głowy
@@ -19,7 +24,7 @@ class Snake():
     def drawSnake(self,OknoGry):
          for wspolrzendne in self.pozycje[::-1]: 
             wazShape=pygame.Rect((wspolrzendne[0],wspolrzendne[1]),(40,40))
-            pygame.draw.rect(OknoGry,(255,192,203),wazShape)
+            pygame.draw.rect(OknoGry,self.kolor,wazShape)
     def snakeMove(self):
         #ostatnia pozycja weza
         ostatniaPozycja=self.pozycje[-1]
