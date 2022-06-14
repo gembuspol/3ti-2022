@@ -12,9 +12,17 @@
 <body>
     <div class="container">
         <label for="customRange1" class="form-label">Zakres poszukiwanej</label>
-        <input type="range" class="form-range" id="customRange1">
+        <input type="range" class="form-range" id="zakres" min="0" max="100" oninput="liczbaZakres()">
+        <output id="wyborLiczby"></output>
     </div>
-    
+    <div class="container">
+        <p>Podaj liczbę
+            <input type="text" id="liczba">
+        </p>
+        <button type="button" class="btn btn-dark" onclick="sprawdz()">Sprawdź</button>
+
+    </div>
+    <script src="skrypt.js"></script>
     
 </body>
 </html>
